@@ -107,6 +107,11 @@ int main() {
 }
 
 void fadd (dados *telnum) {
+
+    if (telnum[100].nome[0] != '\0') {
+
+        printf ("Limite de contatos alcancados!\n");
+    }
     
     printf ("\nDigite o nome do contato:\n");
     fgets (telnum -> nome, sizeof (telnum -> nome), stdin);
@@ -151,6 +156,11 @@ void delctt (dados *telnum) {
 }
 
 void wrtctt (dados *telnum) {
+
+    if (telnum[0].nome[0] == '\0') {
+
+        printf ("Agenda vazia!\n");
+    }
 
     int i;
     
@@ -198,7 +208,7 @@ void opndados (dados *telnum) {
 
     if (arqv == NULL) {
 
-        printf ("Arquivo não encontrado. \n");
+        printf ("Arquivo nao encontrado. \n");
 
         return;    
     }
