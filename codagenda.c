@@ -111,6 +111,7 @@ void fadd (dados *telnum) {
     if (telnum[100].nome[0] != '\0') {
 
         printf ("Limite de contatos alcancados!\n");
+        return;
     }
     
     printf ("\nDigite o nome do contato:\n");
